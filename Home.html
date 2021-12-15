@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>$partan Pri¢e</title>
+		<style type="text/css">
+			body{background: #222;}
+			a{cursor: pointer;}
+			/*HOME*/
+				#home{
+					display: grid;
+					grid-template: 24vh 143vh 10vh / 1fr 5fr;
+					grid-template-areas:
+					'h h'
+					'a m'
+					'f f';
+					background: #222;
+				}
+				#home > #hd{
+					display: grid;
+					grid-template: 60% 40% / 1fr 2fr;
+					grid-template-areas:
+					"lg ac"
+					".. if";
+					background: #000;
+					grid-area: h;
+					height: 99%;
+					width: 99.5%;
+					border-radius: 0.2rem;
+					margin: auto 0.1%;
+				}
+					#home > #hd > #logo{
+						grid-area: "lg";
+						height: 150%;
+						width: auto;
+						margin: 2% 3%;
+					}
+					#home > #hd > #acess{
+						font-family: "Roboto";
+						text-align: right;
+						color: #FFF;
+						grid-area: ac;
+						color: #FFF;
+					}
+						#home > #hd > #acess > #bca,
+						#home > #hd > #acess > #bsc,
+						#home > #hd > #acess > #bli{
+							height: 80%;
+							width: 10%;
+							margin: -1% 0;
+						}
+						#home > #hd > #acess > #bsc{
+							margin-right: 1%;
+						}
+					#home > #hd > #info{
+						grid-area:  if;
+						color: #FFF;
+						text-align: right;
+						font-size: 120%;
+						margin-top: 4%;
+						margin-right: 1%;
+					}
+				#home > #mn{
+					display: grid;
+					grid-template: 25% 25% 25% 25% / 1fr 1fr 1fr 1fr;
+					grid-template-areas:
+					"p11 p21 p31 p41"
+					"p12 p22 p32 p42"
+					"p13 p23 p33 p43"
+					"p14 p24 p34 p44";
+					background: #F00;
+					grid-area: m;
+					height: 99%;
+					width: 99%;
+					border-radius: 0.2rem;
+					margin: auto auto;
+				}
+					#home > #mn > .prd{
+						height: 96%;
+						width: 96%;
+						margin: auto auto;
+						font-family: "Ubuntu Mono";
+						font-size: 90%;
+						justify-items: right;
+					}
+					
+					#home > #mn > #prdI1{
+						grid-area: p11;
+						background: #008;
+					}
+					#home > #mn > #prdI2{
+						grid-area: p21;
+						background: #208;
+					}
+					#home > #mn > #prdI3{
+						grid-area: p31;
+						background: #12F;
+					}
+					#home > #mn > #prdI4{
+						grid-area: p41;
+						background: #2C8;
+					}
+					#home > #mn > #prdI5{
+						grid-area: p12;
+						background: #008;
+					}
+					#home > #mn > #prdI6{
+						grid-area: p22;
+						background: #208;
+					}
+					#home > #mn > #prdI7{
+						grid-area: p32;
+						background: #12F;
+					}
+					#home > #mn > #prdI8{
+						grid-area: p42;
+						background: #2C8;
+					}
+					#home > #mn > #prdI9{
+						grid-area: p13;
+						background: #008;
+					}
+					#home > #mn > #prdI10{
+						grid-area: p23;
+						background: #208;
+					}
+					#home > #mn > #prdI11{
+						grid-area: p33;
+						background: #12F;
+					}
+					#home > #mn > #prdI12{
+						grid-area: p43;
+						background: #2C8;
+					}
+					#home > #mn > #prdI13{
+						grid-area: p14;
+						background: #008;
+					}
+					#home > #mn > #prdI14{
+						grid-area: p24;
+						background: #208;
+					}
+					#home > #mn > #prdI15{
+						grid-area: p34;
+						background: #12F;
+					}
+					#home > #mn > #prdI16{
+						grid-area: p44;
+						background: #2C8;
+					}
+						#home > #mn > .prd > img{
+							height: 70%;
+							width: auto;
+							margin: 2% 0 0 20%;
+						}
+
+				#home > #as{
+					display: grid;
+					grid-template-rows: 10% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4%;
+					grid-template-columns: 1fr;
+					grid-template-areas: 
+					"i0"
+					"i1"
+					"i2"
+					"i3"
+					"i4"
+					"i5"
+					"i6"
+					"i7"
+					"i8"
+					"i9"
+					"i10";
+					background: #0F0;
+					grid-area: a;
+					height: 99%;
+					width: 99%;
+					border-radius: 0.2rem;
+					margin: auto auto;
+				}
+					#home > #as > #it0{
+						grid-area: i0;
+						font-family: "Roboto";
+						font-size: 115%;
+						margin: auto auto;
+					}
+					#home > #as > #it1,
+					#home > #as > #it2,
+					#home > #as > #it3,
+					#home > #as > #it4,
+					#home > #as > #it5,
+					#home > #as > #it6,
+					#home > #as > #it7,
+					#home > #as > #it8,
+					#home > #as > #it9,
+					#home > #as > #it10{
+						font-family: "Roboto";
+						font-size: 90%;
+						text-align: left;
+						height: 80%;
+						width: 80%;
+						margin: auto auto;
+						background-color: rgba(0,0,0,0);
+						border: none;
+						cursor: pointer;
+					}
+					#home > #as > #it1{grid-area: i1;}
+					#home > #as > #it2{grid-area: i2;}
+					#home > #as > #it3{grid-area: i3;}
+					#home > #as > #it4{grid-area: i4;}
+					#home > #as > #it5{grid-area: i5;}
+					#home > #as > #it6{grid-area: i6;}
+					#home > #as > #it7{grid-area: i7;}
+					#home > #as > #it8{grid-area: i8;}
+					#home > #as > #it9{grid-area: i9;}
+					#home > #as > #it10{grid-area: i10;}
+				#home > #ft{
+					background: #00F;
+					grid-area: f;
+					height: 99%;
+					width: 99.5%;
+					border-radius: 0.2rem;
+					margin: auto 0.1%;
+				}
+			/*CONTATO*/
+				#contact{
+					display: none;
+					grid-template: 24vh 43vh / 1fr;
+					grid-template-areas:
+					'h'
+					'm';
+					background: #222;
+				}
+				#contact > #hd{
+					display: grid;
+					grid-area: h;
+					grid-template: 60% 40% / 1fr 2fr;
+					grid-template-areas:
+					"lg ac"
+					".. if";
+					background: #000;
+					grid-area: h;
+					height: 99%;
+					width: 99.5%;
+					border-radius: 0.2rem;
+					margin: auto 0.1%;
+				}
+					#contact > #hd > #logo{
+						grid-area: "lg";
+						height: 150%;
+						width: auto;
+						margin: 2% 3%;
+					}
+					#contact > #hd > #acess{
+						font-family: "Roboto";
+						text-align: right;
+						color: #FFF;
+						grid-area: ac;
+						color: #FFF;
+					}
+						#contact > #hd > #acess > #bca,
+						#contact > #hd > #acess > #bsc,
+						#contact > #hd > #acess > #bli{
+							height: 80%;
+							width: 10%;
+							margin: -1% 0;
+						}
+						#contact > #hd > #acess > #bsc{
+							margin-right: 1%;
+						}
+					#contact > #hd > #info{
+						grid-area:  if;
+						color: #FFF;
+						text-align: right;
+						font-size: 120%;
+						margin-top: 4%;
+						margin-right: 1%;
+					}
+				#contact > #mn{
+					grid-area: m;
+				}
+			/*EMPRESA*/
+				#company{
+					display: none;
+					grid-template: 24vh 43vh / 1fr;
+					grid-template-areas:
+					'h'
+					'm';
+					background: #222;
+				}
+				#company > #hd{
+					display: grid;
+					grid-area: h;
+					grid-template: 60% 40% / 1fr 2fr;
+					grid-template-areas:
+					"lg ac"
+					".. if";
+					background: #000;
+					grid-area: h;
+					height: 99%;
+					width: 99.5%;
+					border-radius: 0.2rem;
+					margin: auto 0.1%;
+				}
+					#company > #hd > #logo{
+						grid-area: "lg";
+						height: 150%;
+						width: auto;
+						margin: 2% 3%;
+					}
+					#company > #hd > #acess{
+						font-family: "Roboto";
+						text-align: right;
+						color: #FFF;
+						grid-area: ac;
+						color: #FFF;
+					}
+						#company > #hd > #acess > #bca,
+						#company > #hd > #acess > #bsc,
+						#company > #hd > #acess > #bli{
+							height: 80%;
+							width: 10%;
+							margin: -1% 0;
+						}
+						#company > #hd > #acess > #bsc{
+							margin-right: 1%;
+						}
+					#company > #hd > #info{
+						grid-area:  if;
+						color: #FFF;
+						text-align: right;
+						font-size: 120%;
+						margin-top: 4%;
+						margin-right: 1%;
+					}
+				#company > #mn{
+					grid-area: m;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="home">
+			<header id="hd">
+				<img src="Imagens/LogoWeb_Name.png" id="logo">
+				<p id="info">
+					<a onclick="changeLayout(0);">Home</a> | 
+					<a onclick="changeLayout(1);">Contato</a> | 
+					<a onclick="changeLayout(2);">Empresa</a>
+				</p>
+				<p id="acess">
+					<button id="bca" onclick="window.open('https://google.com')">Criar Conta</button>
+					<button id="bli" onclick="window.open('https://youtube.com')">Login</button>
+					<button id="bsc" onclick="window.open('https://wikipedia.com')">Carrinho</button>
+				</p>
+			</header>
+			<aside id="as">
+				<p id="it0">Buscar por tópico:</p>
+				<button id="it1">Coolers</button>
+				<button id="it2">Fontes</button>
+				<button id="it3">Gabinetes</button>
+				<button id="it4">GPUs</button>
+				<button id="it5">Memórias</button>
+				<button id="it6">Monitores</button>
+				<button id="it7">Preriféricos</button>
+				<button id="it8">Placas Mãe</button>
+				<button id="it9">Placas Wi-Fi</button>
+				<button id="it10">Processadores</button>
+			</aside>
+			<main id="mn">
+				<figure class="prd" id="prdI1">
+					<img src="Imagens/SeloPlataodeQualidade.png"
+					style="">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI2">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI3">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI4">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI5">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI6">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI7">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI8">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI9">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI10">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI11">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI12">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI13">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI14">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI15">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="prd" id="prdI16">
+					<img src="Imagens/SeloPlataodeQualidade.png">
+					<figcaption>
+						<p>
+							Produto<br/>
+							Preço
+						</p>
+					</figcaption>
+				</figure>
+			</main>
+			<footer id="ft">
+				
+			</footer>
+		</div>
+		
+		<div id="contact" style="background: #F10;">
+			<header id="hd">
+				<img src="Imagens/LogoWeb_Name.png" id="logo">
+				<p id="info">
+					<a onclick="changeLayout(0);">Home</a> | 
+					<a onclick="changeLayout(1);">Contato</a> | 
+					<a onclick="changeLayout(2);">Empresa</a>
+				</p>
+				<p id="acess">
+					<button id="bca" onclick="window.open('https://google.com')">Criar Conta</button>
+					<button id="bli" onclick="window.open('https://youtube.com')">Login</button>
+					<button id="bsc" onclick="window.open('https://wikipedia.com')">Carrinho</button>
+				</p>
+			</header>
+			<main id="mn">
+				Contato.
+			</main>
+		</div>
+
+		<div id="company" style="background: #0A8;">
+			<header id="hd">
+				<img src="Imagens/LogoWeb_Name.png" id="logo">
+				<p id="info">
+					<a onclick="changeLayout(0);">Home</a> | 
+					<a onclick="changeLayout(1);">Contato</a> | 
+					<a onclick="changeLayout(2);">Empresa</a>
+				</p>
+				<p id="acess">
+					<button id="bca" onclick="window.open('https://google.com')">Criar Conta</button>
+					<button id="bli" onclick="window.open('https://youtube.com')">Login</button>
+					<button id="bsc" onclick="window.open('https://wikipedia.com')">Carrinho</button>
+				</p>
+			</header>
+			<main id="mn">
+				Empresa.
+			</main>
+		</div>
+
+		<script type="text/javascript">
+			function changeLayout(tp){
+				let home = document.getElementById("home");
+				let contact = document.getElementById("contact");
+				let company = document.getElementById("company");
+				if(tp == 0){
+					home.style.display = "grid";
+					contact.style.display = "none";
+					company.style.display = "none";
+				}
+				if(tp == 1){
+					home.style.display = "none";
+					contact.style.display = "grid";
+					company.style.display = "none";
+				}
+				if(tp == 2){
+					home.style.display = "none";
+					contact.style.display = "none";
+					company.style.display = "grid";
+				}
+			}
+		</script>
+	</body>
+</html>
