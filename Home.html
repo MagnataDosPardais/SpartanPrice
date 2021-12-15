@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<!-- Lucas Lodi Valenga, Marco Antônio Zerbielli Bee -->
 <html lang="pt-br">
 	<head>
 		<title>$partan Pri¢e</title>
 		<style type="text/css">
 			body{background: #222;}
 			a{cursor: pointer;}
+			a:active{
+				animation: x 2s forwards;
+			}
+			@keyframes x{
+				from{
+					opacity: 0;
+				}
+				to{
+					opacity: 1;
+				}
+			}
 			/*HOME*/
 				#home{
 					display: grid;
@@ -565,6 +575,11 @@
 					home.style.display = "grid";
 					contact.style.display = "none";
 					company.style.display = "none";
+					for(let o = 0; o < 1; o += 0.1){
+						home.style.opacity = `${o}`;
+						console.log(o);
+
+					}
 				}
 				if(tp == 1){
 					home.style.display = "none";
