@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>$partan Pri¢e</title>
+		<title>$partan Pri¢e - HOME</title>
 		<style type="text/css">
 			body{background: #222;}
 			a{cursor: pointer;}
@@ -353,42 +353,42 @@
 			</header>
 			<aside id="as">
 				<p id="it0">Buscar por tópico:</p>
-				<button id="it1">Coolers</button>
-				<button id="it2">Fontes</button>
-				<button id="it3">Gabinetes</button>
-				<button id="it4">GPUs</button>
-				<button id="it5">Memórias</button>
-				<button id="it6">Monitores</button>
-				<button id="it7">Preriféricos</button>
-				<button id="it8">Placas Mãe</button>
-				<button id="it9">Placas Wi-Fi</button>
-				<button id="it10">Processadores</button>
+				<button id="it1" onclick="saveTopic('coolers');">Coolers</button>
+				<button id="it2" onclick="saveTopic('fontes');">Fontes</button>
+				<button id="it3" onclick="saveTopic('gabinetes');">Gabinetes</button>
+				<button id="it4" onclick="saveTopic('gpus');">GPUs</button>
+				<button id="it5" onclick="saveTopic('memorias');">Memórias</button>
+				<button id="it6" onclick="saveTopic('monitores');">Monitores</button>
+				<button id="it7" onclick="saveTopic('perifericos');">Preriféricos</button>
+				<button id="it8" onclick="saveTopic('placasMae');">Placas Mãe</button>
+				<button id="it9" onclick="saveTopic('placasWifi');">Placas Wi-Fi</button>
+				<button id="it10" onclick="saveTopic('processadores');">Processadores</button>
 			</aside>
 			<main id="mn">
-				<figure class="prd" id="prdI1">
+				<figure class="prd" id="prdI1" onclick="addItemCart('p1');">
 					<img src="Imagens/SeloPlataodeQualidade.png"
 					style="">
 					<figcaption>
 						<p>
-							Produto<br/>
+							Produto1<br/>
 							Preço
 						</p>
 					</figcaption>
 				</figure>
-				<figure class="prd" id="prdI2">
+				<figure class="prd" id="prdI2" onclick="addItemCart('p2');">
 					<img src="Imagens/SeloPlataodeQualidade.png">
 					<figcaption>
 						<p>
-							Produto<br/>
+							Produto2<br/>
 							Preço
 						</p>
 					</figcaption>
 				</figure>
-				<figure class="prd" id="prdI3">
+				<figure class="prd" id="prdI3" onclick="addItemCart('p3');">
 					<img src="Imagens/SeloPlataodeQualidade.png">
 					<figcaption>
 						<p>
-							Produto<br/>
+							Produto3<br/>
 							Preço
 						</p>
 					</figcaption>
@@ -555,25 +555,53 @@
 		</div>
 
 		<script type="text/javascript">
+			
+			function saveTopic(t){
+				localStorage.setItem("topic",t);
+				window.open("Topic.html");
+				console.log(localStorage.topic);
+			}
+
+			var cartString = "/cart";
+			var cartArray = cartString.replace("/cart","");
+			cartArray = cartArray.split("/");
+			if(localStorage.getItem("cart") == null){
+				localStorage.setItem("cart",cartString);
+			}
+			function addItemCart(id){
+				cartString = localStorage.getItem("cart");
+				cartArray = cartString.replace("/cart","");
+				cartArray = cartArray.split("/");
+				if(!(cartArray.indexOf(id) > -1)){
+					cartString = localStorage.getItem("cart");
+					cartArray = cartString.replace("/cart","");
+					cartArray = cartArray.split("/");
+					localStorage.setItem("cart",`${cartString}/${id}`);
+					cartString = localStorage.getItem("cart");
+					cartArray = cartString.replace("/cart","");
+					cartArray = cartArray.split("/");
+					console.log(cartArray);
+				}
+			}
+
 			function changeLayout(tp){
 				let home = document.getElementById("home");
 				let contact = document.getElementById("contact");
 				let company = document.getElementById("company");
 				if(tp == 0){
-					let op = 0;
+					document.title = "$partan Pri¢e - HOME";
 					home.style.display = "grid";
 					contact.style.display = "none";
 					company.style.display = "none";
-					while(op < 1):
-						home.style.opacity = `${op}`;
-						op = op + 0.01;
 				}
 				if(tp == 1){
+					document.title = "$partan Pri¢e - CONTATO";
 					home.style.display = "none";
 					contact.style.display = "grid";
 					company.style.display = "none";
 				}
 				if(tp == 2){
+					document.title = "$partan Pri¢e - EMPRESA";
 					home.style.display = "none";
 					contact.style.display = "none";
 					company.style.display = "grid";
