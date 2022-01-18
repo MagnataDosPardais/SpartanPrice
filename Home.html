@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="Imagens/LogoWebII.png" type="image/png">
 		<title>$partan Pri¢e - HOME</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap');
+		</style>
 		<style type="text/css">
-			body{background: #222;}
+			body{background: #111;}
 			a{cursor: pointer;}
 			/*HOME*/
 				#home{
 					display: grid;
-					grid-template: 24vh 143vh 10vh / 1fr 5fr;
+					grid-template: 24vh 297vh 10vh / 1fr 5fr;
 					grid-template-areas:
 					'h h'
 					'a m'
 					'f f';
-					background: #222;
+					background: #111;
 				}
 					#home > #hd{
 						display: grid;
@@ -35,127 +40,112 @@
 							margin: 2% 3%;
 						}
 						#home > #hd > #acess{
-							font-family: "Roboto";
 							text-align: right;
 							color: #FFF;
 							grid-area: ac;
-							color: #FFF;
 						}
-							#home > #hd > #acess > #bca,
-							#home > #hd > #acess > #bsc,
-							#home > #hd > #acess > #bli{
+							#home > #hd > #acess > #bsc{
 								height: 80%;
 								width: 10%;
 								margin: -1% 0;
-							}
-							#home > #hd > #acess > #bsc{
 								margin-right: 1%;
+								color: #FFF;
+								background: #9C0028;
+								border: solid #FFF;
+								border-radius: 0.5rem;
+								font-family: "Noto Sans Mono", monospace;
+								cursor: pointer;
 							}
 						#home > #hd > #info{
-							grid-area:  if;
+							grid-area: if;
 							color: #FFF;
+							font-family: "Noto Sans Mono", monospace;
 							text-align: right;
-							font-size: 120%;
+							font-size: 110%;
 							margin-top: 4%;
 							margin-right: 1%;
 						}
 					#home > #mn{
 						display: grid;
-						grid-template: 25% 25% 25% 25% / 1fr 1fr 1fr 1fr;
+						grid-template-rows: 25% 25% 25% 25%;
+						grid-template-columns: 1fr 1fr 1fr 1fr;
 						grid-template-areas:
 						"p11 p21 p31 p41"
 						"p12 p22 p32 p42"
 						"p13 p23 p33 p43"
 						"p14 p24 p34 p44";
-						background: #F00;
+						background: #222;
 						grid-area: m;
 						height: 99%;
 						width: 99%;
 						border-radius: 0.2rem;
 						margin: auto auto;
+						font-family: monospace;
 					}
 						#home > #mn > .prd{
 							height: 96%;
 							width: 96%;
 							margin: auto auto;
-							font-family: "Ubuntu Mono";
 							font-size: 90%;
-							justify-items: right;
+							border-radius: 0.5rem;
+							cursor: pointer;
+							background: #B2A579;
 						}
-						
-						#home > #mn > #prdI1{
-							grid-area: p11;
-							background: #008;
-						}
-						#home > #mn > #prdI2{
-							grid-area: p21;
-							background: #208;
-						}
-						#home > #mn > #prdI3{
-							grid-area: p31;
-							background: #12F;
-						}
-						#home > #mn > #prdI4{
-							grid-area: p41;
-							background: #2C8;
-						}
-						#home > #mn > #prdI5{
-							grid-area: p12;
-							background: #008;
-						}
-						#home > #mn > #prdI6{
-							grid-area: p22;
-							background: #208;
-						}
-						#home > #mn > #prdI7{
-							grid-area: p32;
-							background: #12F;
-						}
-						#home > #mn > #prdI8{
-							grid-area: p42;
-							background: #2C8;
-						}
-						#home > #mn > #prdI9{
-							grid-area: p13;
-							background: #008;
-						}
-						#home > #mn > #prdI10{
-							grid-area: p23;
-							background: #208;
-						}
-						#home > #mn > #prdI11{
-							grid-area: p33;
-							background: #12F;
-						}
-						#home > #mn > #prdI12{
-							grid-area: p43;
-							background: #2C8;
-						}
-						#home > #mn > #prdI13{
-							grid-area: p14;
-							background: #008;
-						}
-						#home > #mn > #prdI14{
-							grid-area: p24;
-							background: #208;
-						}
-						#home > #mn > #prdI15{
-							grid-area: p34;
-							background: #12F;
-						}
-						#home > #mn > #prdI16{
-							grid-area: p44;
-							background: #2C8;
-						}
-							#home > #mn > .prd > img{
-								height: 70%;
-								width: auto;
-								margin: 2% 0 0 20%;
+							#home > #mn > .prd > #prodImg{
+								height: auto;
+								width: 88%;
+								background: #9C0028;
+								border-radius: 0.5rem;
+								padding: 4%;
+								margin: 2.2% 2%;
 							}
+							#home > #mn > .prd > .spdq{
+								display: block;
+								height: auto;
+								width: 45%;
+								padding: 4%;
+								margin-top: -52%;
+								margin-left: 49.5%;
+							}
+							#home > #mn > .prd > figcaption > .prdName{
+								text-align: left;
+								margin-left: 2%;
+								font-size: auto;
+								font-family: "Noto Sans Mono", monospace;
+								color: #FFF;
+							}
+							#home > #mn > .prd > figcaption > .prdPrice{
+								text-align: center;
+								margin: 0 auto;
+								margin-top: 30%;
+								font-size: 220%;
+								font-family: "Noto Sans Mono", monospace;
+								color: #FFF;
+								background: #C60017;
+								border-radius: 0.5rem;
+								width: 90%;
+							}
+
+						#home > #mn > #prdI1{grid-area: p11;}
+						#home > #mn > #prdI2{grid-area: p21;}
+						#home > #mn > #prdI3{grid-area: p31;}
+						#home > #mn > #prdI4{grid-area: p41;}
+						#home > #mn > #prdI5{grid-area: p12;}
+						#home > #mn > #prdI6{grid-area: p22;}
+						#home > #mn > #prdI7{grid-area: p32;}
+						#home > #mn > #prdI8{grid-area: p42;}
+						#home > #mn > #prdI9{grid-area: p13;}
+						#home > #mn > #prdI10{grid-area: p23;}
+						#home > #mn > #prdI11{grid-area: p33;}
+						#home > #mn > #prdI12{grid-area: p43;}
+						#home > #mn > #prdI13{grid-area: p14;}
+						#home > #mn > #prdI14{grid-area: p24;}
+						#home > #mn > #prdI15{grid-area: p34;}
+						#home > #mn > #prdI16{grid-area: p44;}
 
 					#home > #as{
 						display: grid;
-						grid-template-rows: 10% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4%;
+						grid-template-rows: 6.25% 2.5% 2.5% 2.5% 2.5% 2.5% 2.5% 2.5% 2.5% 2.5% 2.5%;
 						grid-template-columns: 1fr;
 						grid-template-areas: 
 						"i0"
@@ -169,16 +159,17 @@
 						"i8"
 						"i9"
 						"i10";
-						background: #0F0;
+						background: #222;
 						grid-area: a;
 						height: 99%;
 						width: 99%;
 						border-radius: 0.2rem;
 						margin: auto auto;
+						font-family: "Noto Sans Mono", monospace;
+						color: #FFF;
 					}
 						#home > #as > #it0{
 							grid-area: i0;
-							font-family: "Roboto";
 							font-size: 115%;
 							margin: auto auto;
 						}
@@ -192,15 +183,16 @@
 						#home > #as > #it8,
 						#home > #as > #it9,
 						#home > #as > #it10{
-							font-family: "Roboto";
 							font-size: 90%;
 							text-align: left;
-							height: 80%;
-							width: 80%;
+							height: 90%;
+							width: 90%;
 							margin: auto auto;
 							background-color: rgba(0,0,0,0);
+							color: #FFF;
 							border: none;
 							cursor: pointer;
+							font-family: "Noto Sans Mono", monospace;
 						}
 						#home > #as > #it1{grid-area: i1;}
 						#home > #as > #it2{grid-area: i2;}
@@ -213,7 +205,7 @@
 						#home > #as > #it9{grid-area: i9;}
 						#home > #as > #it10{grid-area: i10;}
 					#home > #ft{
-						background: #00F;
+						background: #000;
 						grid-area: f;
 						height: 99%;
 						width: 99.5%;
@@ -242,6 +234,8 @@
 						width: 99.5%;
 						border-radius: 0.2rem;
 						margin: auto 0.1%;
+						background: #000;
+						font-family: "Noto Sans Mono", monospace;
 					}
 						#contact > #hd > #logo{
 							grid-area: "lg";
@@ -250,37 +244,40 @@
 							margin: 2% 3%;
 						}
 						#contact > #hd > #acess{
-							font-family: "Roboto";
 							text-align: right;
 							color: #FFF;
 							grid-area: ac;
-							color: #FFF;
 						}
-							#contact > #hd > #acess > #bca,
-							#contact > #hd > #acess > #bsc,
-							#contact > #hd > #acess > #bli{
+							#contact > #hd > #acess > #bsc{
 								height: 80%;
 								width: 10%;
 								margin: -1% 0;
-							}
-							#contact > #hd > #acess > #bsc{
 								margin-right: 1%;
+								color: #FFF;
+								background: #9C0028;
+								border: solid #FFF;
+								border-radius: 0.5rem;
+								font-family: "Noto Sans Mono", monospace;
+								cursor: pointer;
 							}
 						#contact > #hd > #info{
-							grid-area:  if;
+							grid-area: if;
 							color: #FFF;
 							text-align: right;
 							font-size: 120%;
 							margin-top: 4%;
 							margin-right: 1%;
+							font-size: 110%;
 						}
 					#contact > #mn{
 						grid-area: m;
+						background: #9C0028;
+						font-family: "Noto Sans Mono", monospace;
 					}
 			/*EMPRESA*/
 				#company{
 					display: none;
-					grid-template: 24vh 43vh / 1fr;
+					grid-template: 24vh 55vh / 1fr;
 					grid-template-areas:
 					'h'
 					'm';
@@ -299,6 +296,7 @@
 						width: 99.5%;
 						border-radius: 0.2rem;
 						margin: auto 0.1%;
+						font-family: "Noto Sans Mono", monospace;
 					}
 						#company > #hd > #logo{
 							grid-area: "lg";
@@ -307,36 +305,39 @@
 							margin: 2% 3%;
 						}
 						#company > #hd > #acess{
-							font-family: "Roboto";
 							text-align: right;
 							color: #FFF;
 							grid-area: ac;
-							color: #FFF;
 						}
-							#company > #hd > #acess > #bca,
-							#company > #hd > #acess > #bsc,
-							#company > #hd > #acess > #bli{
+							#company > #hd > #acess > #bsc{
 								height: 80%;
 								width: 10%;
 								margin: -1% 0;
-							}
-							#company > #hd > #acess > #bsc{
 								margin-right: 1%;
+								color: #FFF;
+								background: #9C0028;
+								border: solid #FFF;
+								border-radius: 0.5rem;
+								font-family: "Noto Sans Mono", monospace;
+								cursor: pointer;
 							}
 						#company > #hd > #info{
-							grid-area:  if;
+							grid-area: if;
 							color: #FFF;
 							text-align: right;
 							font-size: 120%;
 							margin-top: 4%;
 							margin-right: 1%;
+							font-size: 110%;
 						}
 					#company > #mn{
 						grid-area: m;
+						background: #9C0028;
+						font-family: "Noto Sans Mono", monospace;
 					}
 		</style>
 	</head>
-	<body>
+	<body onload="generateProducts();">
 		<div id="home">
 			<header id="hd">
 				<img src="Imagens/LogoWeb_Name.png" id="logo">
@@ -346,177 +347,27 @@
 					<a onclick="changeLayout(2);">Empresa</a>
 				</p>
 				<p id="acess">
-					<button id="bca" onclick="window.open('https://google.com')">Criar Conta</button>
-					<button id="bli" onclick="window.open('https://youtube.com')">Login</button>
-					<button id="bsc" onclick="window.open('https://wikipedia.com')">Carrinho</button>
+					<button id="bsc" onclick="window.open('Cart.html')">Carrinho</button>
 				</p>
 			</header>
 			<aside id="as">
 				<p id="it0">Buscar por tópico:</p>
-				<button id="it1" onclick="saveTopic('coolers');">Coolers</button>
-				<button id="it2" onclick="saveTopic('fontes');">Fontes</button>
-				<button id="it3" onclick="saveTopic('gabinetes');">Gabinetes</button>
-				<button id="it4" onclick="saveTopic('gpus');">GPUs</button>
-				<button id="it5" onclick="saveTopic('memorias');">Memórias</button>
-				<button id="it6" onclick="saveTopic('monitores');">Monitores</button>
-				<button id="it7" onclick="saveTopic('perifericos');">Preriféricos</button>
-				<button id="it8" onclick="saveTopic('placasMae');">Placas Mãe</button>
-				<button id="it9" onclick="saveTopic('placasWifi');">Placas Wi-Fi</button>
-				<button id="it10" onclick="saveTopic('processadores');">Processadores</button>
+				<button id="it1" onclick="saveTopic('CO');">Coolers</button>
+				<button id="it2" onclick="saveTopic('FO');">Fontes</button>
+				<button id="it3" onclick="saveTopic('GA');">Gabinetes</button>
+				<button id="it4" onclick="saveTopic('GP');">GPUs</button>
+				<button id="it5" onclick="saveTopic('ME');">Memórias</button>
+				<button id="it6" onclick="saveTopic('MO');">Monitores</button>
+				<button id="it7" onclick="saveTopic('PE');">Periféricos</button>
+				<button id="it8" onclick="saveTopic('PM');">Placas Mãe</button>
+				<button id="it9" onclick="saveTopic('PW');">Placas Wi-Fi</button>
+				<button id="it10" onclick="saveTopic('PR');">Processadores</button>
 			</aside>
-			<main id="mn">
-				<figure class="prd" id="prdI1" onclick="addItemCart('p1');">
-					<img src="Imagens/SeloPlataodeQualidade.png"
-					style="">
-					<figcaption>
-						<p>
-							Produto1<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI2" onclick="addItemCart('p2');">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto2<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI3" onclick="addItemCart('p3');">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto3<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI4">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI5">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI6">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI7">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI8">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI9">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI10">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI11">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI12">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI13">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI14">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI15">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-				<figure class="prd" id="prdI16">
-					<img src="Imagens/SeloPlataodeQualidade.png">
-					<figcaption>
-						<p>
-							Produto<br/>
-							Preço
-						</p>
-					</figcaption>
-				</figure>
-			</main>
-			<footer id="ft">
-				
-			</footer>
+			<main id="mn"></main>
+			<footer id="ft"></footer>
 		</div>
 		
-		<div id="contact" style="background: #F10;">
+		<div id="contact">
 			<header id="hd">
 				<img src="Imagens/LogoWeb_Name.png" id="logo">
 				<p id="info">
@@ -525,17 +376,27 @@
 					<a onclick="changeLayout(2);">Empresa</a>
 				</p>
 				<p id="acess">
-					<button id="bca" onclick="window.open('https://google.com')">Criar Conta</button>
-					<button id="bli" onclick="window.open('https://youtube.com')">Login</button>
-					<button id="bsc" onclick="window.open('https://wikipedia.com')">Carrinho</button>
+					<button id="bsc" onclick="window.open('Cart.html')">Carrinho</button>
 				</p>
 			</header>
 			<main id="mn">
-				Contato.
+				<h1>Contato</h1>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</main>
 		</div>
 
-		<div id="company" style="background: #0A8;">
+		<div id="company">
 			<header id="hd">
 				<img src="Imagens/LogoWeb_Name.png" id="logo">
 				<p id="info">
@@ -544,44 +405,255 @@
 					<a onclick="changeLayout(2);">Empresa</a>
 				</p>
 				<p id="acess">
-					<button id="bca" onclick="window.open('https://google.com')">Criar Conta</button>
-					<button id="bli" onclick="window.open('https://youtube.com')">Login</button>
-					<button id="bsc" onclick="window.open('https://wikipedia.com')">Carrinho</button>
+					<button id="bsc" onclick="window.open('Cart.html')">Carrinho</button>
 				</p>
 			</header>
 			<main id="mn">
-				Empresa.
+				<h1>Empresa</h1>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</main>
 		</div>
 
+		<script type="text/javascript" src="ProdutsBase.js"></script>
 		<script type="text/javascript">
-			
-			function saveTopic(t){
-				localStorage.setItem("topic",t);
-				window.open("Topic.html");
-				console.log(localStorage.topic);
+			localStorage.getItem("topic",'');
+			localStorage.getItem("produt",'');
+
+			function generateProducts(){
+				function getRandomNumb(min, max){
+					let a = max - min + 1;
+					let b = Math.random() * a;
+					let c = Math.floor(b) + min;
+					return(c);
+				}
+				let charLimit = 50;
+				let cl = ["CO","FO","GA","GP","ME","MO","PE","PM","PW","PR"];
+				let idUsed = [];
+				document.getElementById("mn").innerHTML += '';
+				for(let t = 1; t <= 16; t++){
+					let filled = false;
+					while(!filled){
+						let pref = cl[getRandomNumb(0,9)];
+						let objs = db[pref];
+						let num = getRandomNumb(0,Object.keys(objs).length-1);
+						switch (num){
+							case(10):
+								num = 'A';
+								break;
+							case(11):
+								num = 'B';
+								break;
+							case(12):
+								num = 'C';
+								break;
+							case(13):
+								num = 'D';
+								break;
+							case(14):
+								num = 'E';
+								break;
+							case(15):
+								num = 'F';
+								break;
+						}
+						let sorted = objs[`${pref}_000${num}`];
+						let name = sorted["name"].substr(0,charLimit);
+						if(sorted["name"].length >= charLimit){
+							name += "...";
+						}
+						if(sorted["name"].length <= 29){
+							name += "<br/><br/>";
+						}
+						let price = sorted["price"].toLocaleString('pt-BR',{maximumFractionDigits:2})
+						if(idUsed.indexOf(sorted) == -1){
+							let path = '';
+							switch (pref){
+								case "CO":
+									path = "Coolers";
+									break;
+								case "FO":
+									path = "Fontes";
+									break;
+								case "GA":
+									path = "Gabinetes";
+									break;
+								case "GP":
+									path = "GPUs";
+									break;
+								case "ME":
+									path = "Memorias";
+									break;
+								case "MO":
+									path = "Monitores";
+									break;
+								case "PE":
+									path = "Perifericos";
+									break;
+								case "PM":
+									path = "Placas Mae";
+									break;
+								case "PW":
+									path = "Placas Wi-Fi";
+									break;
+								case "PR":
+									path = "Processadores";
+									break;
+							}
+							document.getElementById("mn").innerHTML += 
+							`<figure class="prd" id="prdI${t}" onclick="openProduts('${pref}_000${num}');">
+								<img id="prodImg" src="Prds/${path}/${pref}_000${num}.png"/>
+								<img class="spdq" id="spdq${t}" src="Imagens/SeloPlataodeQualidade.png"/>
+								<figcaption>
+									<p class="prdName">${name}</p>
+									<p class="prdPrice">R$${price}</p>
+								</figcaption>
+							</figure>`;
+							idUsed.push(sorted);
+							filled = true;
+							document.getElementById("spdq"+t).style.display = "none";
+							if(sorted["SPdQ"]){
+								document.getElementById("spdq"+t).style.display = "block";
+							}
+						}
+					}
+				}
 			}
 
-			var cartString = "/cart";
-			var cartArray = cartString.replace("/cart","");
-			cartArray = cartArray.split("/");
-			if(localStorage.getItem("cart") == null){
-				localStorage.setItem("cart",cartString);
-			}
-			function addItemCart(id){
-				cartString = localStorage.getItem("cart");
-				cartArray = cartString.replace("/cart","");
-				cartArray = cartArray.split("/");
-				if(!(cartArray.indexOf(id) > -1)){
-					cartString = localStorage.getItem("cart");
-					cartArray = cartString.replace("/cart","");
-					cartArray = cartArray.split("/");
-					localStorage.setItem("cart",`${cartString}/${id}`);
-					cartString = localStorage.getItem("cart");
-					cartArray = cartString.replace("/cart","");
-					cartArray = cartArray.split("/");
-					console.log(cartArray);
+			function saveTopic(t){
+				if(t == localStorage.getItem("topic")){
+					for(let valt = 1; valt <= 10; valt++){
+						document.getElementById("it"+valt).style.background = "rgba(0,0,0,0)";
+					}
+					for(let vals = 1; vals <= Object.keys(db[t]).length; vals++){
+						document.getElementById("spdq"+vals).style.display = "none";
+					}
+					document.getElementById("mn").innerHTML = '';
+					generateProducts();
+					localStorage.setItem("topic",'');
 				}
+				else{
+					localStorage.setItem("topic",t);
+					let charLimit = 50;
+					let n = 1;
+					let path = '';
+					let it = '';
+					switch (t){
+						case "CO":
+							path = "Coolers";
+							it = 1;
+							break;
+						case "FO":
+							path = "Fontes";
+							it = 2;
+							break;
+						case "GA":
+							path = "Gabinetes";
+							it = 3;
+							break;
+						case "GP":
+							path = "GPUs";
+							it = 4;
+							break;
+						case "ME":
+							path = "Memorias";
+							it = 5;
+							break;
+						case "MO":
+							path = "Monitores";
+							it = 6;
+							break;
+						case "PE":
+							path = "Perifericos";
+							it = 7;
+							break;
+						case "PM":
+							path = "Placas Mae";
+							it = 8;
+							break;
+						case "PW":
+							path = "Placas Wi-Fi";
+							it = 9;
+							break;
+						case "PR":
+							path = "Processadores";
+							it = 10;
+							break;
+					}
+					document.getElementById("mn").innerHTML = '';
+					for(let val = 1; val <= 10; val++){
+						document.getElementById("it"+val).style.background = "rgba(0,0,0,0)";
+					}
+					document.getElementById("it"+it).style.background = "#9C0028";
+					document.getElementById("it"+it).style.borderRadius = "0.5rem";
+					for(let x in db[localStorage.topic]){
+						let name = db[t][x]["name"].substr(0,charLimit);
+						if(db[t][x]["name"].length >= charLimit){
+							name += "...";
+						}
+						if(db[t][x]["name"].length <= 29){
+							name += "<br/><br/>";
+						}
+						let price = db[t][x]["price"].toLocaleString('pt-BR',{maximumFractionDigits:2});
+						document.getElementById("mn").innerHTML += 
+						`<figure class="prd" id="prdI${n}" onclick="openProduts('${x}');">
+							<img id="prodImg" src="Prds/${path}/${x}.png">
+							<img class="spdq" id="spdq${n}" src="Imagens/SeloPlataodeQualidade.png">
+							<figcaption>
+								<p class="prdName">${name}</p>
+								<p class="prdPrice">R$: ${price}</p>
+							</figcaption>
+						</figure>`;
+						document.getElementById("spdq"+n).style.display = "none";
+						if(db[t][x]["SPdQ"]){
+							document.getElementById("spdq"+n).style.display = "block";
+						}
+						n += 1;
+					}
+				}
+			}
+
+			function addItemCart(id){
+				let cartString = localStorage.getItem("cart");
+				let cartArray = [];
+				if(cartString == null || cartString == undefined){
+					localStorage.setItem("cart",id+"/1");
+					console.log("cart created")
+				}
+				else{
+					cartArray = cartString.split(',');
+					if(cartArray.indexOf(id) == -1){
+						cartString = `${cartArray},${id}`;
+						localStorage.setItem("cart",cartString+"/1");
+						cartArray = localStorage.cart.split(',');
+						let cartArrayAux = [];
+						for(let x of cartArray){
+							cartArrayAux.push(x.split('/'));
+						}
+						console.log(cartArrayAux);
+					}
+				}
+			}
+
+			function openProduts(id){
+				window.open("Produts.html");
+				localStorage.setItem("produt",id);
 			}
 
 			function changeLayout(tp){

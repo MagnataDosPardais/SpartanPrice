@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title></title>
+		<link rel="icon" href="Imagens/LogoWebII.png" type="image/png">
+		<meta charset="utf-8">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap');
+		</style>
+		<style type="text/css">
+			a{cursor: pointer;}
+			body{
+				background: #111;
+				display: grid;
+				grid-template-rows: 24vh 198vh 10vh;
+				grid-template-columns: 1fr;
+				grid-template-areas:
+				'h'
+				'm'
+				'f';
+			}
+				#hd{
+					display: grid;
+					grid-template: 60% 40% / 1fr 2fr;
+					grid-template-areas:
+					"lg ac"
+					".. if";
+					background: #000;
+					grid-area: h;
+					height: 99%;
+					width: 99.5%;
+					border-radius: 0.2rem;
+					margin: auto 0.1%;
+				}
+					#hd > #logo{
+						grid-area: "lg";
+						height: 150%;
+						width: auto;
+						margin: 2% 3%;
+					}
+					#hd > #acess{
+						font-family: "Roboto";
+						text-align: right;
+						color: #FFF;
+						grid-area: ac;
+						color: #FFF;
+					}
+						#hd > #acess > #bsc{
+							height: 80%;
+							width: 10%;
+							margin: -1% 0;
+							margin-right: 1%;
+							font-family: "Noto Sans Mono", monospace;
+							color: #FFF;
+							background: #9C0028;
+							border: solid #FFF;
+							border-radius: 0.5rem;
+							cursor: pointer;
+						}
+					#hd > #info{
+						grid-area:  if;
+						color: #FFF;
+						text-align: right;
+						font-size: 120%;
+						margin-top: 4%;
+						margin-right: 1%;
+						font-family: "Noto Sans Mono", monospace;
+					}
+				#mn{
+					display: grid;
+					grid-template-rows: 3% 40% 5% 10% 20%;
+					grid-template-columns: 1fr;
+					grid-template-areas: 
+					'w'
+					'p'
+					'd'
+					'i';
+					background: #222;
+					grid-area: m;
+					height: 99%;
+					width: 99%;
+					border-radius: 0.2rem;
+					margin: auto auto;
+				}
+					#mn > #wy{
+						grid-area: w;
+						margin: 0.4% 0;
+						color: #FFF;
+						font-family: "Noto Sans Mono", monospace;
+						margin-left: 1%;
+					}
+					#mn > #produtsSection{
+						grid-area: p;
+						display: grid;
+						grid-template-rows: 100%;
+						grid-template-columns: 50% 50%;
+						grid-template-areas: 
+						"im in";
+						width: 90%;
+						height: 134%;
+						margin: 0 auto;
+						background: #111;
+					}
+						#mn > #produtsSection > #imageSection{
+							grid-area: im;
+							margin-left: 1%;
+						}
+							#mn > #produtsSection > #imageSection > img{
+								height: auto;
+								width: 92%;
+								margin: 0 0;
+								border-radius: 0.5rem;
+								background: #222;
+								padding: 3%;
+							}
+							#mn > #produtsSection > #imageSection > #switch{
+								display: flex;
+								cursor: pointer;
+								margin-top: 1%;
+								margin-bottom: 2%;
+								margin-left: 1%;
+								font-family: "Noto Sans Mono", monospace;
+							}
+								#mn > #produtsSection > #imageSection > #switch > #switchText{
+									padding-right: 1%;
+									font-size: 115%;
+								}
+								#mn > #produtsSection > #imageSection > #switch > #switchWapper{
+									display: inline-block;
+									height: 25%;
+									width: 8%;
+									position: relative;
+								}
+									#mn > #produtsSection > #imageSection > 
+									#switch > #switchWapper > #switchButton{
+										position: absolute;
+										top: 0;
+										right: 0;
+										bottom: 0;
+										left: 0;
+										display: flex;
+										justify-content: space-between;
+										border-radius: 1rem;
+										background-color: #EEE;
+									}
+									#mn > #produtsSection > #imageSection > 
+									#switch > #switchWapper > #switchButton::before{
+										content: '';
+										height: 80%;
+										width: 37%;
+										position: absolute;
+										left: 4%;
+										bottom: 9%;
+										border-radius: 5rem;
+										transition: .4s all ease;
+										background-color: #9C002C;
+									}
+									#mn > #produtsSection > #imageSection > 
+									#switch > #switchWapper > #switchWapper{
+										opacity: 0;
+										height: 0;
+										width: 0;
+									}
+								#mn > #produtsSection > #imageSection > 
+								#switch > #switchWapper > #bgFill:checked + #switchButton{
+									background-color: #222;
+								}
+								#mn > #produtsSection > #imageSection > 
+								#switch > #switchWapper > #bgFill:checked + #switchButton::before{
+									transform: translateX(142%);
+								}
+						#mn > #produtsSection > #infoSection{
+							display: grid;
+							grid-template-rows: 20% 60% 20%;
+							grid-template-columns: 1fr 1fr;
+							grid-template-areas: 
+							"nam nam"
+							"dal dal"
+							"bub bua";
+							grid-area: in;
+							height: 79%;
+							margin-top: 6.5%;
+							margin-right: 1%;
+							background: #FFF;
+							text-align: center;
+							font-size: 140%;
+							font-family: "Noto Sans Mono", monospace;
+							border-radius: 0.5rem;
+							padding: 3%;
+						}
+							#mn > #produtsSection > #infoSection > #nameSection{
+								grid-area: nam;
+							}
+							#mn > #produtsSection > #infoSection > button{
+								width: 100%;
+								height: 92%;
+								margin-top: 4.2%;
+								color: #FFF;
+								background: #9C0028;
+								border: solid #000;
+								border-radius: 0.5rem;
+								font-family: "Noto Sans Mono", monospace;
+								font-size: 100%;
+								cursor: pointer;
+							}
+								#mn > #produtsSection > #infoSection > #adc{
+									grid-area: bua;
+								}
+								#mn > #produtsSection > #infoSection > #buy{
+									grid-area: bub;
+
+								}
+							#mn > #produtsSection > #infoSection > #discontAlert{
+								grid-area: dal;
+								font-size: 70%;
+								text-align: left;
+								font-size: 64%;
+							}
+								#mn > #produtsSection > #infoSection > #discontAlert > #iconPay{
+									height: 10%;
+									width: auto;
+									margin-bottom: -2%;
+									margin-top: 4%;
+								}
+								#mn > #produtsSection > #infoSection > #discontAlert > #textPay{
+									margin-bottom: 5%;
+								}
+					#mn > #descriptionDiv{
+						grid-area: d;
+						width: 97%;
+						margin-top: 15%;
+						font-family: "Noto Sans Mono", monospace;
+						font-size: 70%;
+						text-align: justify;
+						color: #FFF;
+					}
+						#mn > #descriptionDiv > #descriptionTitle, #mn > #tecInfoDiv > #tecInfoTitle{
+							margin-left: 1%;
+							font-size: 130%;
+						}
+						#mn > #descriptionDiv > #description, #mn > #tecInfoDiv > #tecInfo{
+							margin-left: 2%;
+						}
+					
+					#mn > #tecInfoDiv{
+						grid-area: i;
+						margin-top: 26%;
+						font-family: "Noto Sans Mono", monospace;
+						font-size: 70%;
+						color: #FFF;
+					}
+				#ft{
+					background: #000;
+					grid-area: f;
+					height: 99%;
+					width: 99.5%;
+					border-radius: 0.2rem;
+					margin: auto 0.1%;
+				}
+		</style>
+	</head>
+
+	<body>
+		<header id="hd">
+			<img src="Imagens/LogoWeb_Name.png" id="logo">
+			<p id="info">
+				<a onclick="window.open('Home.html')">Home</a>
+			</p>
+			<p id="acess">
+				<button id="bsc" onclick="window.open('Cart.html')">Carrinho</button>
+			</p>
+		</header>
+		<main id="mn">
+			<p id="wy"></p>
+			<div id="produtsSection">
+				<div id="imageSection">
+					<label id="switch">
+						<div id="switchWapper">
+							<input type="checkbox" id="bgFill" onclick="changeBG();"></input>
+							<span id="switchButton"></span>
+						</div>
+					</label>
+					<img id="produtsImage" src="">
+				</div>
+				<div id="infoSection">
+					<p id="nameSection"></p>
+					<p id="discontAlert"></p>
+					<button id="buy" onclick="buy();">Comprar</button>
+					<button id="adc" onclick="addItemCart(sessionStorage.it);window.open('Cart.html')">Adicionar ao carrinho</button>
+				</div>
+			</div>
+			<div id="descriptionDiv">
+				<p id="descriptionTitle"><b>Descrição:</b></p>
+				<p id="description"></p>
+			</div>
+			<div id="tecInfoDiv">
+				<p id="tecInfoTitle"><b>Informações Técnicas:</b></p>
+				<p id="tecInfo"></p>
+			</div>
+		</main>
+		<footer id="ft"></footer>
+		<script type="text/javascript" src="produtsBase.js"></script>
+		<script type="text/javascript">
+			function buy(){
+				let prefix = sessionStorage.it[0]+sessionStorage.it[1]
+				let price = db[prefix][sessionStorage.it]["price"];
+				price = (1-db[prefix][sessionStorage.it]["discount"][0]/100)*price;
+				localStorage.setItem('pay',price);
+				window.open('Billet.html')
+			}
+			function addItemCart(id){
+				let cartString = localStorage.getItem("cart");
+				let cartArray = [];
+				if(cartString == null || cartString == undefined){
+					localStorage.setItem("cart",id+"/1");
+					console.log("cart created")
+				}
+				else{
+					cartArray = cartString.split(',');
+					if(localStorage.cart.indexOf(id) == -1){
+						cartString = `${cartArray},${id}`;
+						localStorage.setItem("cart",cartString+"/1");
+					}
+				}
+			}
+			function changeBG(){
+				if(document.getElementById("bgFill").checked){
+					document.getElementById("produtsImage").style.background = "#EEE";
+				}
+				else{
+					document.getElementById("produtsImage").style.background = "#222";
+				}
+			}
+
+			if((sessionStorage.it == localStorage.produt) || (sessionStorage.it == undefined)){
+				sessionStorage.setItem("it",localStorage.produt);
+			}
+			let prefix = sessionStorage.it[0]+sessionStorage.it[1];
+			document.title = "$partan Pri¢e: " + db[prefix][sessionStorage.it]["name"];
+			switch (prefix){
+				case "CO":
+					path = "Coolers";
+					break;
+				case "FO":
+					path = "Fontes";
+					break;
+				case "GA":
+					path = "Gabinetes";
+					break;
+				case "GP":
+					path = "GPUs";
+					break;
+				case "ME":
+					path = "Memorias";
+					break;
+				case "MO":
+					path = "Monitores";
+					break;
+				case "PE":
+					path = "Perifericos";
+					break;
+				case "PM":
+					path = "Placas Mae";
+					break;
+				case "PW":
+					path = "Placas Wi-Fi";
+					break;
+				case "PR":
+					path = "Processadores";
+					break;
+			}
+			document.getElementById("wy").innerHTML = `HOME > ${path} > ${db[prefix][sessionStorage.it]["name"]}`;
+			document.getElementById("discontAlert")
+			document.getElementById("produtsImage").src = `Prds/${path}/${sessionStorage.it}.png`;
+			for(let p = 0; p <= 2; p++){
+				let tip = [
+					["Boleto", "Imagens/Boleto.png"],
+					["Cartão de crédito", "Imagens/Cartao.png"],
+					["Spartan Card", "Imagens/spartanCard.png"]
+				];
+				let prc = db[prefix][sessionStorage.it]["price"];
+				let dsc = db[prefix][sessionStorage.it]["discount"];
+				document.getElementById("discontAlert").innerHTML += `
+				<img id="iconPay" src="${tip[p][1]}">
+				<label id="textPay">${tip[p][0]}: R$${((1-dsc[p]/100)*prc).toLocaleString('pt-BR',{maximumFractionDigits:2})} (${dsc[p]}%)</label><br/>`;
+			}
+			document.getElementById("description").innerHTML = db[prefix][sessionStorage.it]["description"];
+			document.getElementById("nameSection").innerHTML = db[prefix][sessionStorage.it]["name"];
+			for(let x of db[prefix][sessionStorage.it]["characteristics"]){
+				document.getElementById("tecInfo").innerHTML += `- ${x} <br/>`;
+			}
+		</script>
+	</body>
+
+</html>

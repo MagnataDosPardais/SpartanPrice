@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>$partan Pri¢e: Carrinho</title>
+		<link rel="icon" href="Imagens/LogoWebII.png" type="image/png">
+		<meta charset="utf-8">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap');
+		</style>
+		<style type="text/css">
+			a{cursor: pointer;}
+			body{
+				background: #111;
+				display: grid;
+				grid-template-rows: 24vh 227vh 10vh;
+				grid-template-columns: 1fr;
+				grid-template-areas:
+				'h'
+				'm'
+				'f';
+			}
+				#hd{
+					display: grid;
+					grid-template: 60% 40% / 1fr 2fr;
+					grid-template-areas:
+					"lg ac"
+					".. if";
+					background: #000;
+					grid-area: h;
+					height: 99%;
+					width: 99.5%;
+					border-radius: 0.2rem;
+					margin: auto 0.1%;
+				}
+					#hd > #logo{
+						grid-area: "lg";
+						height: 150%;
+						width: auto;
+						margin: 2% 3%;
+					}
+					#hd > #acess{
+						text-align: right;
+						color: #FFF;
+						grid-area: ac;
+						color: #FFF;
+					}
+						#hd > #acess > #bsc{
+							height: 80%;
+							width: 10%;
+							margin: -1% 0;
+							margin-right: 1%;
+							color: #FFF;
+							background: #9C0028;
+							border: solid #FFF;
+							border-radius: 0.5rem;
+							font-family: "Noto Sans Mono", monospace;
+							cursor: pointer;
+						}
+					#hd > #info{
+						grid-area: if;
+						color: #FFF;
+						text-align: right;
+						font-size: 120%;
+						margin-top: 4%;
+						margin-right: 1%;
+						font-family: "Noto Sans Mono", monospace;
+					}
+				#mn{
+					display: grid;
+					grid-template-rows: 82% 18%;
+					grid-template-columns: 1fr;
+					background: #222;
+					grid-area: m;
+					height: 99%;
+					width: 99%;
+					border-radius: 0.2rem;
+					margin: auto auto;
+				}
+					#mn > #produtsSection{
+						height: 96%;
+						width: 96%;
+						background: #877A5A;
+						margin: 1% auto;
+						padding: 1%;
+						border-radius: 0.2rem;
+					}
+						#mn > #produtsSection > #emptyAlert{
+							font-size: 300%;
+							font-family: "Noto Sans Mono", monospace;
+							text-align: center;
+						}
+						#mn > #produtsSection > #prdListed1{
+							display: grid;
+							grid-template-rows: 5rem;
+							grid-template-columns: 0.3fr 1fr 1fr 0.2fr 0.1fr 0.2fr;
+							height: 5rem;
+							width: 96%;
+							background: #9C0028;
+							margin: 0 auto;
+							margin-bottom: 1%;
+							padding: 0.5%;
+							border: solid #000;
+							border-radius: 0.5rem;
+						}
+							#mn > #produtsSection > #prdListed1 > #prodImg{
+								height: 100%;
+								width: auto;
+							}
+							#mn > #produtsSection > #prdListed1 > #prdName{
+								color: #FFF;
+								font-family: "Noto Sans Mono", monospace;
+								font-size: 90%;
+								margin: auto 0;
+								width: 90%;
+							}
+							#mn > #produtsSection > #prdListed1 > #prdPrice{
+								color: #FFF;
+								font-family: "Noto Sans Mono", monospace;
+								font-size: 130%;
+								margin: auto 0;
+							}
+							#mn > #produtsSection > #prdListed1 > #bplus,#bminus{
+								height: 50%;
+								width: 70%;
+								margin: auto auto;
+								font-family: "Noto Sans Mono", monospace;
+								font-size: 180%;
+								color: #000;
+								background: #9C0028;
+								border: none;
+								cursor: pointer;
+							}
+							#mn > #produtsSection > #prdListed1 > #prdQuantity{
+								font-size: 200%;
+								margin: auto auto;
+								color: #FFF;
+								font-family: "Noto Sans Mono", monospace;
+							}
+						#mn > .paymentSection{
+							display: grid;
+							grid-template-rows: 1fr 1fr;
+							grid-template-columns: 1fr 1fr 1fr;
+							grid-template-areas: 
+							"bol car spa"
+							"bcl val bfi";
+							font-family: "Noto Sans Mono", monospace;
+							width: 98%;
+							margin: 0 auto;
+						}
+						#mn > .paymentSection > button{
+							height: 70%;
+							width: 90%;
+							margin: auto auto;
+							font-family: "Noto Sans Mono", monospace;
+							font-size: 130%;
+						}
+						#mn > .paymentSection > #buttonClear{
+							grid-area: bcl;
+						}
+						#mn > .paymentSection > #buttonFinish{
+							grid-area: bfi;
+						}
+						#mn > .paymentSection > p{
+							text-align: center;
+							background: #9C0028;
+						}
+						#mn > .paymentSection > #boleto{
+							grid-area: bol;
+							border-radius: 0.2rem 0 0 0.2rem;
+						}
+						#mn > .paymentSection > #cartao{
+							grid-area: car;
+						}
+						#mn > .paymentSection > #spartanCard{
+							grid-area: spa;
+							border-radius: 0 0.2rem 0.2rem 0;
+						}
+						#mn > .paymentSection > #valor{
+							grid-area: val;
+							background: rgba(0,0,0,0);
+							font-size: 260%;
+							background: #C60017;
+							border-radius: 0.2rem;
+						}
+				#ft{
+					background: #000;
+					grid-area: f;
+					height: 99%;
+					width: 99.5%;
+					border-radius: 0.2rem;
+					margin: auto 0.1%;
+				}
+		</style>
+	</head>
+
+	<body onload="selectPay('B');fillMainWithCart();">
+		<header id="hd">
+			<img src="Imagens/LogoWeb_Name.png" id="logo">
+			<p id="info">
+				<a onclick="window.open('Home.html')">Home</a>
+			</p>
+			<p id="acess">
+				<button id="bsc" onclick="window.open('Cart.html')">Carrinho</button>
+			</p>
+		</header>
+		<main id="mn">
+			<div id="produtsSection">
+			</div>
+			<div class="paymentSection">
+				<p id="boleto" onclick="selectPay('B')">Boleto</p>
+				<p id="cartao" onclick="selectPay('C')">Cartão</p>
+				<p id="spartanCard" onclick="selectPay('S')">Spartan Card</p>
+				<p id="valor">...</p>
+				<button id="buttonClear" onclick="clearCart();">Limpar carrinho</button><br/>
+				<button id="buttonFinish" onclick="finish();">Finalizar pagamento</button>
+			</div>
+		</main>
+		<footer id="ft"></footer>
+		<script type="text/javascript" src="produtsBase.js"></script>
+		<script type="text/javascript">
+			function finish(){
+				fillMainWithCart();
+				window.open('Billet.html');
+			}
+			function clearCart(){
+				if(window.confirm('Deseja deletar todos os itens do carrinho?')){
+					localStorage.removeItem('cart')
+				}
+				fillMainWithCart();
+			}
+			function selectPay(t){
+				sessionStorage.setItem("pay",t);
+				if(t == 'B'){
+					document.getElementById("boleto").style.background = "#C60017";
+					document.getElementById("cartao").style.background = "#9C0028";
+					document.getElementById("spartanCard").style.background = "#9C0028";
+				}
+				if(t == 'C'){
+					document.getElementById("boleto").style.background = "#9C0028";
+					document.getElementById("cartao").style.background = "#C60017";
+					document.getElementById("spartanCard").style.background = "#9C0028";
+				}
+				if(t == 'S'){
+					document.getElementById("boleto").style.background = "#9C0028";
+					document.getElementById("cartao").style.background = "#9C0028";
+					document.getElementById("spartanCard").style.background = "#C60017";
+				}
+				fillMainWithCart();
+			}
+			function addQuantityCart(id,v){
+				let cartString = localStorage.getItem("cart");
+				let cartArray = localStorage.cart.split(',');
+				let cartArrayAux = [];
+				let n = 0;
+				let newCartString = '';
+				for(let x of cartArray){
+					cartArrayAux.push(x.split('/'));
+				}
+				for(let y of cartArrayAux){
+					if(y[0] == id){
+						y[1] = Number(y[1])+v;
+					}
+					console.log(y, y[1] != undefined, (y[1] > 0));
+					if((y[1] != undefined) && (y[1] > 0)){
+						newCartString += y[0]+'/'+y[1]+',';
+					}
+				}
+				if(newCartString[newCartString.length-1] == ','){
+					newCartString = newCartString.substr(0,newCartString.length-1);
+				}
+				localStorage.setItem("cart",newCartString);
+				if(localStorage.getItem("cart").length <= 1){
+					localStorage.removeItem("cart");
+				}
+				fillMainWithCart();
+			}
+			function fillMainWithCart(){
+				let cartString = localStorage.getItem("cart");
+				let cartArray = [];
+				if(cartString == null || cartString == undefined){
+					document.getElementById("produtsSection").innerHTML = `
+					<p id="emptyAlert">O Carrinho está vazio...</p>`;
+				}
+				else{
+					cartArray = localStorage.cart.split(',');
+					let cartArrayAux = [];
+					let indx = 0;
+					let sum = 0;
+					document.getElementById("produtsSection").innerHTML = '';
+					for(let x of cartArray){
+						cartArrayAux.push(x.split('/'));
+						let prefix = x[0]+x[1];
+						let path = '';
+						switch (prefix){
+							case "CO":
+								path = "Coolers";
+								break;
+							case "FO":
+								path = "Fontes";
+								break;
+							case "GA":
+								path = "Gabinetes";
+								break;
+							case "GP":
+								path = "GPUs";
+								break;
+							case "ME":
+								path = "Memorias";
+								break;
+							case "MO":
+								path = "Monitores";
+								break;
+							case "PE":
+								path = "Perifericos";
+								break;
+							case "PM":
+								path = "Placas Mae";
+								break;
+							case "PW":
+								path = "Placas Wi-Fi";
+								break;
+							case "PR":
+								path = "Processadores";
+								break;
+						}
+						try{
+							let code = cartArrayAux[indx][0];
+							let discountType = sessionStorage.getItem("pay");
+							let discount = 0;
+							if(discountType == 'B'){
+								discount = db[prefix][code]["discount"][0]
+							}
+							if(discountType == 'C'){
+								discount = db[prefix][code]["discount"][1]
+							}
+							if(discountType == 'S'){
+								discount = db[prefix][code]["discount"][2]
+							}
+							let name = db[prefix][code]["name"];
+							let price = db[prefix][code]["price"];
+							let quantity = Number(cartArrayAux[indx][1]);
+							discount = 1-discount/100;
+							let value = price * discount;
+							value = value * quantity;
+							sum += Number(value);
+							value = value.toLocaleString('pt-BR',{maximumFractionDigits:2});
+							console.log(value);
+							document.getElementById("produtsSection").innerHTML += `
+							<div id="prdListed1">
+								<img id="prodImg" src="Prds/${path}/${code}.png">
+								<p id="prdName">${name}</p>
+								<p id="prdPrice">R$: ${value}</p>
+								<button id="bminus" onclick="addQuantityCart('${code}',-1)">-</button>
+								<p id="prdQuantity">${quantity}</p>
+								<button id="bplus" onclick="addQuantityCart('${code}',+1)">+</button>
+							</div>`;
+							indx += 1;
+						}
+						catch{}
+						document.getElementById("valor").innerHTML = `R$${sum.toLocaleString('pt-BR',{maximumFractionDigits:2})}`;
+						localStorage.setItem("pay",sum);
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

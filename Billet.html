@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>$partan Pri¢e: Carrinho</title>
+		<link rel="icon" href="Imagens/LogoWebII.png" type="image/png">
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<p id="p" style="font-size: 900%;">
+			Como diminui a fonte?
+		</p>
+	</body>
+	<script type="text/javascript">
+		document.getElementById('p').innerHTML += `<br/> Estás me devendo [R$${Number(localStorage.pay).toLocaleString('pt-BR',{maximumFractionDigits:2})}]`;
+	</script>
+</html>
